@@ -1,0 +1,29 @@
+{
+  "name": "superlevel",
+  "version": "1.0.0",
+  "description": "a minimalist cli utility for leveldb databases",
+  "bin": {
+    "superlevel": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "dependencies": {
+    "leveldown-prebuilt": "^0.10.2",
+    "levelup": "^0.18.6",
+    "minimist": "^0.2.0",
+    "through2": "^0.5.1"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/superlevel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/superlevel/issues"
+  },
+  "homepage": "https://github.com/maxogden/superlevel"
+}
