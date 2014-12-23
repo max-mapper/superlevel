@@ -7,7 +7,7 @@ var through = require('through2')
 
 var dir = path.resolve(process.cwd(), args._[0])
 
-load(dir, function(err, db) {
+load(dir, args, function(err, db) {
   if (err) throw err
   var op = args._[1]
   var key = args._[2]
