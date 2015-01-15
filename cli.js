@@ -7,6 +7,8 @@ var through = require('through2')
 
 var dir = path.resolve(process.cwd(), args._[0])
 
+if (Object.keys(args).indexOf('createIfMissing') === -1) args.createIfMissing = false
+  
 load(dir, args, function(err, db) {
   if (err) throw err
   var op = args._[1]
