@@ -5,6 +5,11 @@ var args = require('minimist')(process.argv.slice(2))
 var path = require('path')
 var through = require('through2')
 
+if (args._.length === 0) {
+  console.error("Usage: superlevel <path-to-leveldb> <command> <key> <value> --option")
+  process.exit(1)
+}
+
 var dir = path.resolve(process.cwd(), args._[0])
 
 if (Object.keys(args).indexOf('createIfMissing') === -1) args.createIfMissing = false
