@@ -9,7 +9,7 @@
   "license": "BSD",
   "dependencies": {
     "leveldown": "^1.2.2",
-    "levelup": "^1.2.0",
+    "levelup": "^1.2.1",
     "minimist": "^1.1.0",
     "through2": "^0.6.3"
   },
