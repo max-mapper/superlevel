@@ -1,6 +1,6 @@
 {
   "name": "superlevel",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "a minimalist cli utility for leveldb databases",
   "bin": {
     "superlevel": "cli.js"
