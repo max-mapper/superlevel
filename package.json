@@ -10,6 +10,7 @@
   "dependencies": {
     "level": "^1.6.0",
     "minimist": "^1.2.0",
+    "ndjson": "^1.5.0",
     "stream-each": "^1.2.0",
     "through2": "^2.0.3"
   },
