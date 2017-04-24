@@ -70,12 +70,14 @@ function getStream (db) {
   streamEach(input, function (data, next) {
     if (!data) return next(new Error('Must specify key'))
     db.get(data, function (err, val) {
-      if (err.notFound) {
-        results.write({key: data})
-        next()
-        return
+      if (err) {
+        if (err.notFound) {
+          results.write({key: data})
+          next()
+          return
+        }
+        return next(err)
       }
-      if (err) return next(err)
       results.write({key: data, value: val})
       next()
     })
