@@ -8,10 +8,10 @@
   "author": "max ogden",
   "license": "BSD",
   "dependencies": {
-    "leveldown": "^1.2.2",
-    "levelup": "^1.2.1",
-    "minimist": "^1.1.0",
-    "through2": "^0.6.3"
+    "level": "^1.6.0",
+    "minimist": "^1.2.0",
+    "stream-each": "^1.2.0",
+    "through2": "^2.0.3"
   },
   "main": "index.js",
   "devDependencies": {},

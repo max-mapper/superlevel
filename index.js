@@ -1,7 +1,5 @@
-var levelup = require('levelup')
-var leveldown = require('leveldown')
+var level = require('level')
 
-module.exports = function(dir, opts, cb) {
-  opts.db = leveldown
-  levelup(dir, opts, cb)
+module.exports = function (dir, opts, cb) {
+  level(dir, opts, cb)
 }

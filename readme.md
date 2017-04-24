@@ -17,7 +17,10 @@ most arguments are applied directly to a [levelup](https://github.com/rvagg/node
 ## examples
 
 ```
-$ superlevel db/ put foo bar
+$ superlevel db put foo baz --createIfMissing=true # if the db doesnt exist yet
+$ superlevel db/ get foo
+baz
+$ superlevel db/ put foo baz
 $ superlevel db/ get foo
 bar
 $ superlevel db/ put zoo cow
@@ -29,4 +32,15 @@ $ superlevel db/ createReadStream --start=z
 $ superlevel db/ delete foo
 $ superlevel db/ createReadStream
 {"key":"zoo","value":"cow"}
+```
+
+### streaming many gets and puts
+
+```
+$ cat cooldata.json | superlevel db/ createWriteStream
+{"success":true,"key":"pizza"}
+{"success":true,"key":"musubi"}
+$ cat cooldata.json | jsonfilter key | superlevel db/ createGetStream
+{"key":"pizza","value":"pineapple"}
+{"key":"musubi","value":"spam"}
 ```
